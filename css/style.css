@@ -1,0 +1,184 @@
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #4976a2;
+  font-family: 'Arial', Sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 0;
+}
+.ibt {
+  display: inline-block;
+  vertical-align: top;
+}
+* {
+  box-sizing: border-box;
+}
+#header {
+  background: #29405a;
+  color: #fff;
+  padding: 10px;
+}
+#header h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+#header h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+.content {
+  padding: 5px;
+}
+.content_title {
+  font-size: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  border-bottom: 1px solid #fff;
+}
+#recent .game_block,
+#closest .game_block,
+#community .game_block,
+#upcoming .game_block {
+  position: relative;
+  border: 5px solid #29405a;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+#recent .game_block img,
+#closest .game_block img,
+#community .game_block img,
+#upcoming .game_block img {
+  width: 100%;
+}
+#recent .game_block .game_datetime,
+#closest .game_block .game_datetime,
+#community .game_block .game_datetime,
+#upcoming .game_block .game_datetime {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+#recent .game_block .game_datetime .date_block,
+#closest .game_block .game_datetime .date_block,
+#community .game_block .game_datetime .date_block,
+#upcoming .game_block .game_datetime .date_block {
+  display: inline-block;
+  vertical-align: top;
+  width: 33%;
+  margin-right: .5%;
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-wieght: 400;
+}
+#recent .game_block .game_datetime .date_block span,
+#closest .game_block .game_datetime .date_block span,
+#community .game_block .game_datetime .date_block span,
+#upcoming .game_block .game_datetime .date_block span {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+}
+#recent .game_block .game_datetime .date_block:nth-child(3),
+#closest .game_block .game_datetime .date_block:nth-child(3),
+#community .game_block .game_datetime .date_block:nth-child(3),
+#upcoming .game_block .game_datetime .date_block:nth-child(3) {
+  margin-right: 0;
+}
+#recent .game_block .game_datetime .time_block,
+#closest .game_block .game_datetime .time_block,
+#community .game_block .game_datetime .time_block,
+#upcoming .game_block .game_datetime .time_block {
+  display: block;
+  margin-top: 5px;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  html,
+  body {
+    width: 100%;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  .game_block {
+    display: inline-block;
+    vertical-align: top;
+    width: 33%;
+    margin-right: .5%;
+  }
+  .game_block:nth-child(3n+3) {
+    margin-right: 0;
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .game_block {
+    display: inline-block;
+    vertical-align: top;
+    width: 49.5%;
+    margin-right: .5%;
+  }
+  .game_block:nth-child(2n+2) {
+    margin-right: 0;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  html {
+    font-size: 125%;
+  }
+}
+@media only screen and (min-width: 1224px) {
+  #header h1 {
+    font-size: 3rem;
+  }
+  #header h2 {
+    font-size: 2rem;
+  }
+  #recent,
+  #closest,
+  #community {
+    display: inline-block;
+    vertical-align: top;
+    width: 33%;
+    margin-right: .5%;
+  }
+  #community {
+    margin-right: 0;
+  }
+  .game_datetime {
+    padding: 5px;
+  }
+  #upcoming {
+    display: block;
+    width: 100%;
+  }
+  #upcoming .game_block {
+    display: inline-block;
+    vertical-align: top;
+    width: 24%;
+    margin-right: 1%;
+  }
+  #upcoming .game_block:nth-child(4n+4) {
+    margin-right: 0;
+  }
+}
